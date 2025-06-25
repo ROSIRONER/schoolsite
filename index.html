@@ -1,22 +1,474 @@
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Школа №47 - Изучение китайского языка</title>
     <meta name="description" content="Официальный сайт школы №47 - изучение китайского языка и культуры" />
-    <meta name="author" content="Школа №47" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Главная страница -->
+        <div id="main-page" class="page active">
+            <div class="min-h-screen bg-gradient">
+                <div class="container">
+                    <header class="header">
+                        <h1 class="main-title">МБОУ СОШ №47</h1>
+                        <p class="subtitle-ru">Изучение китайского языка и культуры</p>
+                        <p class="subtitle-cn">汉语学习与中国文化体验</p>
+                    </header>
 
-    <meta property="og:title" content="Школа №47 - Изучение китайского языка" />
-    <meta property="og:description" content="Официальный сайт школы №47 - изучение китайского языка и культуры" />
-    <meta property="og:type" content="website" />
+                    <div class="content-wrapper">
+                        <div class="cards-grid">
+                            <div class="card red-border">
+                                <div class="icon-globe"></div>
+                                <h2 class="card-title">中文版本 / Китайская версия</h2>
+                                <p class="card-text">Информация о школе, истории, традициях и контактах на китайском языке</p>
+                                <button class="btn btn-red" onclick="showPage('chinese-page')">
+                                    中文
+                                    <span class="arrow">→</span>
+                                </button>
+                            </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-  </head>
+                            <div class="card yellow-border">
+                                <div class="icon-book"></div>
+                                <h2 class="card-title yellow">В помощь обучающемуся</h2>
+                                <p class="card-text">Справочная информация для изучающих китайский язык: тоны, иероглифы, ключи и полезные ресурсы</p>
+                                <button class="btn btn-yellow" onclick="showPage('study-page')">
+                                    Перейти к справочным материалам
+                                    <span class="arrow">→</span>
+                                </button>
+                            </div>
+                        </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                        <div class="info-card">
+                            <h3 class="info-title">О нашей программе</h3>
+                            <p class="info-text">
+                                В школе №47 мы предлагаем комплексное изучение китайского языка для учащихся 7-9 классов 
+                                с планами расширения программы на начальную школу с 2026 года. Наши ученики не только 
+                                изучают язык, но и погружаются в богатую китайскую культуру.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Китайская версия -->
+        <div id="chinese-page" class="page">
+            <div class="min-h-screen bg-gradient">
+                <div class="container">
+                    <header class="page-header">
+                        <button class="back-btn" onclick="showPage('main-page')">← 返回首页 / На главную</button>
+                        <h1 class="page-title">欢迎访问МБОУ СОШ №47中文官网！</h1>
+                        <p class="page-subtitle">我们诚挚欢迎您的到来！</p>
+                    </header>
+
+                    <div class="content-wrapper">
+                        <div class="section-card red-header">
+                            <div class="card-header red">
+                                <h3>我们的汉语课程特色</h3>
+                            </div>
+                            <div class="card-content">
+                                <p class="mb-4">多年来，我校为7-9年级学生开设汉语课程，并计划自2026学年起将汉语教学扩展至小学部。</p>
+                                <div class="feature-list">
+                                    <div class="feature-item">
+                                        <div class="bullet red"></div>
+                                        <p><strong>语言与文化并重：</strong>学生不仅学习汉语语法和词汇基础，还深入体验中国文化，了解当代中国的发展、经济及关键领域动态。</p>
+                                    </div>
+                                    <div class="feature-item">
+                                        <div class="bullet red"></div>
+                                        <p><strong>实践与创新：</strong>通过商业汉语模拟、创意项目和国际活动，提升学生的实际应用能力。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-card yellow-header">
+                            <div class="card-header yellow">
+                                <h3>传统活动与成就</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="activity-section">
+                                    <h4 class="activity-title">中俄儿童艺术节</h4>
+                                    <p>学生常年参与《俄罗斯与中国：文化交响曲》艺术节，通过绘画、音乐和表演展现跨文化理解。</p>
+                                </div>
+                                <div class="activity-section">
+                                    <h4 class="activity-title">商业汉语实践</h4>
+                                    <p>在《开放经济：可持续发展》论坛中，学生设计公司名称、学习中式商务礼仪，获得真实商业场景体验。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-card red-header">
+                            <div class="card-header red">
+                                <h3>未来计划</h3>
+                            </div>
+                            <div class="card-content">
+                                <p class="mb-4">我们将组织更多竞赛、文化论坛和交流活动，为学生提供展示平台，深化中俄教育合作。</p>
+                                <p>诚挚邀请所有来自中华人民共和国的朋友和合作伙伴与我们携手合作！</p>
+                            </div>
+                        </div>
+
+                        <div class="section-card yellow-header">
+                            <div class="card-header yellow">
+                                <h3>联系方式</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="contact-list">
+                                    <div class="contact-item">
+                                        <div class="contact-icon">✉</div>
+                                        <span>s_47@edu54.ru</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <div class="contact-icon">📍</div>
+                                        <span>630024新西伯利亚, 和平街1号</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <div class="contact-icon">📞</div>
+                                        <div>
+                                            <div>+7 (383) 353-57-72</div>
+                                            <div>+7 (383) 353-42-10</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Страница обучения -->
+        <div id="study-page" class="page">
+            <div class="min-h-screen bg-gradient-yellow">
+                <div class="container">
+                    <header class="page-header">
+                        <button class="back-btn" onclick="showPage('main-page')">← На главную</button>
+                        <h1 class="page-title yellow">В помощь обучающемуся</h1>
+                        <p class="page-subtitle">
+                            Дорогие обучающиеся! На данной странице мы подобрали несколько важных советов 
+                            для успешного освоения китайского языка! Надеемся, что материал окажется важным и полезным!
+                        </p>
+                    </header>
+
+                    <div class="content-wrapper">
+                        <!-- Тоны -->
+                        <div class="section-card red-header">
+                            <div class="card-header red">
+                                <h3>Тональность китайского языка</h3>
+                            </div>
+                            <div class="card-content">
+                                <p class="mb-6">
+                                    Важной фонетической особенностью китайского языка является его тональность. 
+                                    Один и тот же набор звуков, произнесенный с разной интонацией (первым, вторым, 
+                                    третьим и четвертым тоном), может изменить значение слова. Например, слог "ma" 
+                                    может принимать разные значения:
+                                </p>
+                                
+                                <div class="mb-6 text-center">
+                                    <img 
+                                        src="/lovable-uploads/0d2ae85f-ea3a-46a6-8a81-d81f6231c6b4.png" 
+                                        alt="Тоны китайского языка" 
+                                        style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin: 0 auto;"
+                                    />
+                                </div>
+                                
+                                <div class="tones-grid">
+                                    <div class="tone-card">
+                                        <div class="tone-character">妈</div>
+                                        <div class="tone-pinyin">mā</div>
+                                        <div class="tone-meaning">мама</div>
+                                        <div class="tone-description">высокий ровный тон</div>
+                                    </div>
+                                    <div class="tone-card">
+                                        <div class="tone-character">麻</div>
+                                        <div class="tone-pinyin">má</div>
+                                        <div class="tone-meaning">конопля, кунжут</div>
+                                        <div class="tone-description">восходящий тон</div>
+                                    </div>
+                                    <div class="tone-card">
+                                        <div class="tone-character">马</div>
+                                        <div class="tone-pinyin">mǎ</div>
+                                        <div class="tone-meaning">лошадь</div>
+                                        <div class="tone-description">нисходяще-восходящий тон</div>
+                                    </div>
+                                    <div class="tone-card">
+                                        <div class="tone-character">骂</div>
+                                        <div class="tone-pinyin">mà</div>
+                                        <div class="tone-meaning">ругать</div>
+                                        <div class="tone-description">нисходящий тон</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tone-scheme">
+                                    <div class="tone-scheme-title">Схема тонов китайского языка</div>
+                                    <div class="tone-marks">¯ ˊ ˇ ˋ</div>
+                                    <div class="tone-numbers">1-й → 2-й → 3-й → 4-й тон</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Иероглифические ключи -->
+                        <div class="section-card red-header">
+                            <div class="card-header red">
+                                <h3>Иероглифические ключи</h3>
+                            </div>
+                            <div class="card-content">
+                                <p class="mb-6">
+                                    Важной структурной составляющей практически любого иероглифа в китайском языке является ключ. 
+                                    Он может выступать в качестве смыслового или фонетического показателя, выражает основное его значение, 
+                                    указывает на принадлежность предмета, обозначенного этим иероглифом, к определенному предметному классу. 
+                                    В современном китайском языке их используется от 201 до 214.
+                                </p>
+                                
+                                <div class="mb-6 text-center">
+                                    <h4 class="radicals-title mb-4">Таблица 214 ключей китайского языка</h4>
+                                    <img 
+                                        src="/lovable-uploads/32489fdb-1f4d-41d1-b909-f6b72ecb46d2.png" 
+                                        alt="214 ключей китайского языка" 
+                                        style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin: 0 auto;"
+                                    />
+                                </div>
+                                
+                                <h4 class="radicals-title mb-4">Наиболее распространенные ключи:</h4>
+                                <div class="radicals-grid">
+                                    <div class="radical-card">
+                                        <div class="radical-character">人</div>
+                                        <div class="radical-meaning">человек</div>
+                                        <div class="radical-strokes">2 черт</div>
+                                    </div>
+                                    <div class="radical-card">
+                                        <div class="radical-character">水</div>
+                                        <div class="radical-meaning">вода</div>
+                                        <div class="radical-strokes">4 черт</div>
+                                    </div>
+                                    <div class="radical-card">
+                                        <div class="radical-character">火</div>
+                                        <div class="radical-meaning">огонь</div>
+                                        <div class="radical-strokes">4 черт</div>
+                                    </div>
+                                    <div class="radical-card">
+                                        <div class="radical-character">木</div>
+                                        <div class="radical-meaning">дерево</div>
+                                        <div class="radical-strokes">4 черт</div>
+                                    </div>
+                                    <div class="radical-card">
+                                        <div class="radical-character">土</div>
+                                        <div class="radical-meaning">земля</div>
+                                        <div class="radical-strokes">3 черт</div>
+                                    </div>
+                                    <div class="radical-card">
+                                        <div class="radical-character">金</div>
+                                        <div class="radical-meaning">металл</div>
+                                        <div class="radical-strokes">8 черт</div>
+                                    </div>
+                                    <div class="radical-card">
+                                        <div class="radical-character">日</div>
+                                        <div class="radical-meaning">солнце</div>
+                                        <div class="radical-strokes">4 черт</div>
+                                    </div>
+                                    <div class="radical-card">
+                                        <div class="radical-character">月</div>
+                                        <div class="radical-meaning">луна</div>
+                                        <div class="radical-strokes">4 черт</div>
+                                    </div>
+                                    <div class="radical-card">
+                                        <div class="radical-character">心</div>
+                                        <div class="radical-meaning">сердце</div>
+                                        <div class="radical-strokes">4 черт</div>
+                                    </div>
+                                    <div class="radical-card">
+                                        <div class="radical-character">手</div>
+                                        <div class="radical-meaning">рука</div>
+                                        <div class="radical-strokes">4 черт</div>
+                                    </div>
+                                    <div class="radical-card">
+                                        <div class="radical-character">口</div>
+                                        <div class="radical-meaning">рот</div>
+                                        <div class="radical-strokes">3 черт</div>
+                                    </div>
+                                    <div class="radical-card">
+                                        <div class="radical-character">目</div>
+                                        <div class="radical-meaning">глаз</div>
+                                        <div class="radical-strokes">5 черт</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-note">
+                                    <strong>Справочно:</strong> В России при изучении китайского языка используется 
+                                    традиционная таблица из 214 ключей. Знание ключей помогает понимать структуру 
+                                    и значение сложных иероглифов.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Правила написания иероглифов -->
+                        <div class="section-card yellow-header">
+                            <div class="card-header yellow">
+                                <h3>Правила написания иероглифов</h3>
+                            </div>
+                            <div class="card-content">
+                                <p class="mb-6">
+                                    Китайцы уделяют особое внимание написанию иероглифов. Для носителей этой древней 
+                                    культуры очень важно соблюдать правила написания черт (ключей и графем в иероглифах). 
+                                    От правильной последовательности написания черт зависит и глубинное понимание самой сути иероглифа.
+                                </p>
+                                
+                                <div class="mb-6">
+                                    <h4 class="activity-title mb-4">Правила написания иероглифов:</h4>
+                                    <div style="background-color: #fef3c7; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #d97706;">
+                                        <ol style="margin: 0; padding-left: 1.5rem; color: #374151; line-height: 1.8;">
+                                            <li style="margin-bottom: 0.75rem;"><strong>Иероглиф пишется сверху вниз.</strong></li>
+                                            <li style="margin-bottom: 0.75rem;"><strong>Иероглиф пишется слева направо.</strong></li>
+                                            <li style="margin-bottom: 0.75rem;"><strong>Сначала пишутся горизонтальные черты, потом вертикальные и откидные.</strong> Нижняя горизонтальная черта, если она не пересекается, пишется после вертикальной.</li>
+                                            <li style="margin-bottom: 0.75rem;"><strong>Сначала пишется откидная влево, затем откидная вправо.</strong></li>
+                                            <li style="margin-bottom: 0.75rem;"><strong>Сначала пишутся черты, составляющие внешний контур знака, затем черты внутри него,</strong> черта, замыкающая контур внизу пишется в последнюю очередь.</li>
+                                            <li style="margin-bottom: 0.75rem;"><strong>Сначала пишется вертикальная, находящаяся в центре,</strong> если она не пересекается горизонтальной, затем боковые черты.</li>
+                                            <li><strong>Точка справа пишется в последнюю очередь.</strong></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-6 text-center">
+                                    <h4 class="activity-title mb-4">Основные иероглифические черты:</h4>
+                                    <img 
+                                        src="/lovable-uploads/51d975ff-2925-490c-80df-0b8550f05fe5.png" 
+                                        alt="Основные иероглифические черты" 
+                                        style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin: 0 auto;"
+                                    />
+                                </div>
+                                
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                                    <div style="background-color: #fef3c7; padding: 1rem; border-radius: 8px;">
+                                        <div style="text-align: center; margin-bottom: 0.75rem;">
+                                            <div style="font-size: 2.5rem; font-weight: bold; color: #a16207; margin-bottom: 0.5rem;">三</div>
+                                            <div style="font-size: 0.875rem; font-weight: 600; color: #a16207;">Сверху вниз</div>
+                                        </div>
+                                        <p style="font-size: 0.75rem; color: #6b7280; text-align: center;">Горизонтальные черты пишутся сверху вниз</p>
+                                    </div>
+                                    
+                                    <div style="background-color: #fef3c7; padding: 1rem; border-radius: 8px;">
+                                        <div style="text-align: center; margin-bottom: 0.75rem;">
+                                            <div style="font-size: 2.5rem; font-weight: bold; color: #a16207; margin-bottom: 0.5rem;">川</div>
+                                            <div style="font-size: 0.875rem; font-weight: 600; color: #a16207;">Слева направо</div>
+                                        </div>
+                                        <p style="font-size: 0.75rem; color: #6b7280; text-align: center;">Вертикальные черты пишутся слева направо</p>
+                                    </div>
+                                    
+                                    <div style="background-color: #fef3c7; padding: 1rem; border-radius: 8px;">
+                                        <div style="text-align: center; margin-bottom: 0.75rem;">
+                                            <div style="font-size: 2.5rem; font-weight: bold; color: #a16207; margin-bottom: 0.5rem;">十</div>
+                                            <div style="font-size: 0.875rem; font-weight: 600; color: #a16207;">Сначала горизонтальная, потом вертикальная</div>
+                                        </div>
+                                        <p style="font-size: 0.75rem; color: #6b7280; text-align: center;">При пересечении горизонтальная черта пишется первой</p>
+                                    </div>
+                                    
+                                    <div style="background-color: #fef3c7; padding: 1rem; border-radius: 8px;">
+                                        <div style="text-align: center; margin-bottom: 0.75rem;">
+                                            <div style="font-size: 2.5rem; font-weight: bold; color: #a16207; margin-bottom: 0.5rem;">人</div>
+                                            <div style="font-size: 0.875rem; font-weight: 600; color: #a16207;">Сначала откидная влево, потом вправо</div>
+                                        </div>
+                                        <p style="font-size: 0.75rem; color: #6b7280; text-align: center;">Откидные черты пишутся в определенном порядке</p>
+                                    </div>
+                                    
+                                    <div style="background-color: #fef3c7; padding: 1rem; border-radius: 8px;">
+                                        <div style="text-align: center; margin-bottom: 0.75rem;">
+                                            <div style="font-size: 2.5rem; font-weight: bold; color: #a16207; margin-bottom: 0.5rem;">小</div>
+                                            <div style="font-size: 0.875rem; font-weight: 600; color: #a16207;">Сначала центр, потом стороны</div>
+                                        </div>
+                                        <p style="font-size: 0.75rem; color: #6b7280; text-align: center;">Центральная черта пишется перед боковыми</p>
+                                    </div>
+                                    
+                                    <div style="background-color: #fef3c7; padding: 1rem; border-radius: 8px;">
+                                        <div style="text-align: center; margin-bottom: 0.75rem;">
+                                            <div style="font-size: 2.5rem; font-weight: bold; color: #a16207; margin-bottom: 0.5rem;">国</div>
+                                            <div style="font-size: 0.875rem; font-weight: 600; color: #a16207;">Рамка до содержимого</div>
+                                        </div>
+                                        <p style="font-size: 0.75rem; color: #6b7280; text-align: center;">Внешние элементы пишутся перед внутренними</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="background-color: #fef2f2; padding: 1rem; border-radius: 8px;">
+                                    <p style="font-size: 0.875rem; color: #b91c1c; text-align: center;">
+                                        <strong>Важно:</strong> Существует несколько наиболее общих правил написания иероглифа. 
+                                        Правильная последовательность написания черт помогает лучше запомнить иероглиф и понять его структуру.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Полезные факты -->
+                        <div class="section-card yellow-header">
+                            <div class="card-header yellow">
+                                <h3>Несколько полезных фактов о китайском языке</h3>
+                            </div>
+                            <div class="card-content">
+                                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                                    <div style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; background-color: #fef3c7; border-radius: 8px;">
+                                        <div style="flex-shrink: 0; width: 2rem; height: 2rem; background-color: #d97706; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.875rem;">1</div>
+                                        <p style="color: #374151; line-height: 1.6;">
+                                            Китайский язык относится к отдельной сино-тибетской языковой семье. Его ближайшими родственниками являются тибетские и бирманские языки. На нем говорит более 1.3 миллиарда человек.
+                                        </p>
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; background-color: #fef3c7; border-radius: 8px;">
+                                        <div style="flex-shrink: 0; width: 2rem; height: 2rem; background-color: #d97706; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.875rem;">2</div>
+                                        <p style="color: #374151; line-height: 1.6;">
+                                            Для обучения фонетике китайского языка, начиная с 20 века используется фонетическая транскрипция - пьининь, основанный на записи звуков латинскими буквами. Поэтому не забудь повторить буквы латинского алфавита перед началом изучения китайского!
+                                        </p>
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; background-color: #fef3c7; border-radius: 8px;">
+                                        <div style="flex-shrink: 0; width: 2rem; height: 2rem; background-color: #d97706; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.875rem;">3</div>
+                                        <p style="color: #374151; line-height: 1.6;">
+                                            При работе со словарями и написании иероглифов помни, что в КНР используется упрощенная система письма. По итогам реформы в континентальном Китае многие иероглифы сократили количество черт. Традиционная (более сложная) система письма осталась в некоторых южных регионах КНР - Гонконге, Гуандуне, Тайване и т.п.
+                                        </p>
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; background-color: #fef3c7; border-radius: 8px;">
+                                        <div style="flex-shrink: 0; width: 2rem; height: 2rem; background-color: #d97706; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.875rem;">4</div>
+                                        <p style="color: #374151; line-height: 1.6;">
+                                            В китайском языке очень много различных диалектов - часто китайцы из разных провинций очень плохо понимают устную речь друг друга. В среднем выделяют около 7 наиболее крупных диалектов в китайском языке. В качестве литературной и фонетической нормы принят Пекинский диалект, или "путунхуа". Именно на "путунхуа" осуществляется государственное образование, управление, работа СМИ на всей территории КНР. Обязательно обращай внимание на эти особенности при общении с китайцами.
+                                        </p>
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; background-color: #fef3c7; border-radius: 8px;">
+                                        <div style="flex-shrink: 0; width: 2rem; height: 2rem; background-color: #d97706; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.875rem;">5</div>
+                                        <p style="color: #374151; line-height: 1.6;">
+                                            В древности китайцы писали вертикально справа-налево. Объясняется эта особенность очень просто - материалом для письма служили бамбуковые дощечки, которые сшивались вместе в один свиток. На таком "полотне" вертикальное письмо было вполне оправданным.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div style="margin-top: 2rem; text-align: center;">
+                                    <h4 class="activity-title mb-4">Традиционное письмо на бамбуковых дощечках</h4>
+                                    <img 
+                                        src="/lovable-uploads/6cf82772-e634-4d0b-814b-35ebe0434e15.png" 
+                                        alt="Бамбуковые дощечки для письма" 
+                                        style="max-width: 20rem; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin: 0 auto;"
+                                    />
+                                    <p style="font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem;">
+                                        Так выглядели древние китайские книги из бамбуковых дощечек
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Заключение -->
+                        <div class="final-card">
+                            <h3 class="final-title">Желаем успехов в изучении китайского языка!</h3>
+                            <p class="final-chinese">好好学习汉语！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
